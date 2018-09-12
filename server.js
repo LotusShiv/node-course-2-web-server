@@ -110,6 +110,13 @@ app.get('/bad', (req, res) =>{
     });
 });
 
+//d) Projects
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects page'
+    });
+});
+
 //app.listen binds our application to a port on the machine
 //This will listen never really finish 
 //and will wait until for e.g. you respond with say a ctrl c
