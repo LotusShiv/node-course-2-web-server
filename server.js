@@ -2,6 +2,7 @@ const express = require('express');
 //using handlebarsjs view engine
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 //make a new express app - no args needed
 var app = express();
@@ -112,6 +113,6 @@ app.get('/bad', (req, res) =>{
 //app.listen binds our application to a port on the machine
 //This will listen never really finish 
 //and will wait until for e.g. you respond with say a ctrl c
-app.listen(3000, () => {
-    console.log('Server is listening on port 3000');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
